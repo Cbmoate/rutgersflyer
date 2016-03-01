@@ -24,23 +24,27 @@ form{
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  width: auto;
 }
 
-#firstrowimage{
-  margin-left: -1%;
+/* remove spacing between middle columns */
+.row.no-gutter [class*='col-']:not(:first-child):not(:last-child) {
+  padding-right:0;
+  padding-left:0;
+}
+/* remove right padding from first column */
+.row.no-gutter [class*='col-']:first-child {
+  padding-right:0;
+}
+/* remove left padding from first column */
+.row.no-gutter [class*='col-']:last-child {
+  padding-left:0;
 }
 
-
-#secondrowimage{
-  margin-left: -1%;
-  margin-right: -1%;
-}
-
-#thirdrowimage{
-  padding-left: 3%;
+.row .mycol {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .hovereffect {
@@ -129,10 +133,6 @@ img {
   transition-delay:.2s;
 }
 
-body{
-  background-color: #F5F3EC;
-}
-
 h4{
   padding-left: 5%;
 }
@@ -145,6 +145,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-color: #F5F3EC;
 }
 
 main {
