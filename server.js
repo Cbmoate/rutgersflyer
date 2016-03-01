@@ -257,7 +257,18 @@ app.post('/register', function(req,res){
 });
 
 app.get('/info/:name', function(req, res){
-  res.render('displayInfo', {name: req.params.name});
+
+  Business.findOne({
+    where: {
+      name: req.params.name
+    }
+  }).then(function(business){
+    console.log(business);
+    res.render('displayInfo', {businesses: business});
+  }).catch(function(err){
+    console.log(err);
+    res.redirect('/?msg=Error');
+  });
 });
 
 
