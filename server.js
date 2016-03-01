@@ -174,8 +174,8 @@ Business.belongsToMany(User, {through: Review});
 //page rendering
 app.get('/', function(req, res){
   if(req.isAuthenticated()){
-    console.log(res.user);
-    res.render('firstpage', {firstDisplay: false, msg: req.query.msg, email: req.user.email, isAuthenticated: req.isAuthenticated(), firstname: req.user.firstname});
+console.log(req.user);
+    res.render('firstpage', req.user);
   }else{
     res.render('firstpage', {firstDisplay: false, msg: req.query.msg, isAuthenticated: req.isAuthenticated()});
   }
@@ -238,7 +238,7 @@ app.post('/login', passport.authenticate('local', {
 }));
 
 app.post('/postreview', function(req,res){
-  
+
 })
 app.post('/register', function(req,res){
 
