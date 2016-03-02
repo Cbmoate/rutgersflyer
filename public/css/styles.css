@@ -23,7 +23,7 @@ form{
   margin-top: 6%;
 }
 
-img {
+.img-responsive {
   width: 100%;
   height: auto;
 }
