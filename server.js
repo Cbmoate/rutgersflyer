@@ -294,11 +294,22 @@ app.post('/addingLocation', function(req, res){
     res.render('firstpage');
   }).catch(function(err){
     console.log(err);
+    console.log(err)
     res.redirect('/?msg=Error');
   });
 });
 
-
+app.post('/create_review', function(req,res){
+  console.log(req.user)
+  Review.create(req.body).then(function(err, result){
+    console.log('err: ' + err);
+    console.log('result: ' +result);
+    res.redirect('/info/asdf')
+  }).catch(function(err){
+    console.log('err: ' + err);
+    res.redirect('/?msg=Error');
+  });
+})
 //Testing the database
 sequelize.sync().then(function() {
   app.listen(PORT, function () {
