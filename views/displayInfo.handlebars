@@ -25,9 +25,10 @@
         </div>
 
         <div class="row">
-          <form class="col s12" action='/postreview' method='POST'>
+          <form class="col s12" action='/create_review' method='POST'>
             <div class="input-field">
               <input type="hidden" name="rating" id='starRatingInput' value="">
+              <input type="hidden" name="BusinessId" id='businessInput' value={{businesses.id}}>
               <input id="input_text" type="text" length="300" name='message'>
               <label for="input_text">Review....</label>
             </div>
