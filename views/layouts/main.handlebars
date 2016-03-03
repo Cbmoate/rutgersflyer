@@ -18,7 +18,9 @@
                 <li><a href="/login">{{firstname}} {{lastname}}</a></li>
                 <li><a href="/logout">Logout</a></li>
               {{else}}
+              <!-- Modal Trigger Login -->
               <li><a href="#!" id="loginButton" datatarget="loginModal">Sign In</a></li>
+              <!-- Modal Trigger register-->
               <li><a href="#!" id="testButton" datatarget="modal1">Sign Up</a></li>
               {{/if}}
             </ul>
@@ -36,7 +38,10 @@
       <div class="row">
         <!--modal for login-->
         <div class="col S12">
+<<<<<<< HEAD
+=======
 
+>>>>>>> 3df09d5f254f0160dc3c74a79fe25878276285c4
           <!-- Modal Structure -->
           <div id="loginModal" class="modal">
             <div class="modal-content">
@@ -44,7 +49,7 @@
               <form class="col s12" action="/login" method="post">
               <div class="input-field col s6">
                 <input id="email" type="text" class="validate" name='email'>
-                <label for="email">Email</label>
+                <label for="email" autofocus>Email</label>
               </div>
 
               <div class="input-field col s6">
@@ -61,7 +66,11 @@
 
         <!--modal for registration-->
         <div class="col S12">
+<<<<<<< HEAD
+           
+=======
 
+>>>>>>> 3df09d5f254f0160dc3c74a79fe25878276285c4
             <!-- Modal Structure -->
             <div id="modal1" class="modal">
               <div class="modal-content">
@@ -69,7 +78,7 @@
                 <form class="col s12" action="/register" method="post">
                   <div class="row">
                     <div class="input-field col s6">
-                      <input id="first_name" type="text" class="validate" name='firstname'>
+                      <input id="first_name" type="text" class="validate" name='firstname'autofocus>
                       <label for="first_name">First Name</label>
                     </div>
                     <div class="input-field col s6">
