@@ -38,67 +38,77 @@
       <div class="row">
         <!--modal for login-->
         <div class="col S12">
-<<<<<<< HEAD
-=======
 
->>>>>>> 3df09d5f254f0160dc3c74a79fe25878276285c4
           <!-- Modal Structure -->
           <div id="loginModal" class="modal">
             <div class="modal-content">
               <h4>Log In</h4>
               <form class="col s12" action="/login" method="post">
-              <div class="input-field col s6">
-                <input id="email" type="text" class="validate" name='email'>
-                <label for="email" autofocus>Email</label>
-              </div>
 
-              <div class="input-field col s6">
-                <input id="password" type="password" class="validate" name='password'>
-                <label for="password">Password</label>
-              </div>
-              <button class="btn waves-effect waves-light" type="submit" name="action">Login</button>
-            </form>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" type="text" class="validate" name='email'>
+                    <label for="email" autofocus>Email</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="password" type="password" class="validate" name='password'>
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <button class="btn waves-effect waves-light" type="submit" name="action">Login</button>
+                </div>
+              </form>
             </div>
-
-            <div class="modal-footer"></div>
           </div>
         </div>
 
         <!--modal for registration-->
         <div class="col S12">
-<<<<<<< HEAD
-           
-=======
 
->>>>>>> 3df09d5f254f0160dc3c74a79fe25878276285c4
             <!-- Modal Structure -->
             <div id="modal1" class="modal">
               <div class="modal-content">
                 <h4>User Registration</h4>
                 <form class="col s12" action="/register" method="post">
+
                   <div class="row">
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                       <input id="first_name" type="text" class="validate" name='firstname'autofocus>
                       <label for="first_name">First Name</label>
                     </div>
-                    <div class="input-field col s6">
+                  </div>
+
+                  <div class="row">
+                    <div class="input-field col s12">
                       <input id="last_name" type="text" class="validate" name='lastname'>
                       <label for="last_name">Last Name</label>
                     </div>
                   </div>
 
                   <div class="row">
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                       <input id="email" type="email" class="validate" name='email'>
                       <label for="email" data-error="Enter a valid Email address">Email</label>
                     </div>
                   </div>
-                  <div class="input-field col s6">
-                    <input id="password" type="password" class="validate" name='password'>
-                    <label for="password">Password</label>
+
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="password" type="password" class="validate" name='password'>
+                      <label for="password">Password</label>
+                    </div>
                   </div>
-                  <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+
+                  <div class="row">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                  </div>
                 </form>
+
               </div>
             </div>
         </div>
