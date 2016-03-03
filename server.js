@@ -174,7 +174,6 @@ Business.belongsToMany(User, {through: Review});
 
 //page rendering
 app.get('/', function(req, res){
-  //console.log(req)
   if(req.isAuthenticated()){
 console.log(req.user);
 console.log(req.user.lastname);
@@ -184,40 +183,9 @@ console.log(req.user.lastname);
   }
 });
 
-//app.get('/find/:category', function(req, res){
-//
-//  Business.findAll({
-//    where: {
-//      category: req.params.category
-//    }
-//  }).then(function(business){
-//    Review.findAll({
-//      where: {
-//        BusinessId: business[0].dataValues.id
-//      }
-//    }).then(function(reviews){
-//      res.render('firstpage', {
-//        category: req.params.category,
-//        rating: reviews[0].dataValues.rating,
-//        reviews: reviews[0].dataValues.message,
-//        name: business[0].dataValues.name,
-//        firstDisplay: true
-//      });
-//    }).catch(function(err) {
-//      console.log(err);
-//      res.redirect('/');
-//    });
-//  }).catch(function(err) {
-//    console.log(err);
-//    res.redirect('/');
-//  });
-//
-//});
-
 
 app.get('/places-things/:category', function(req, res){
 
-  console.log("places-things: "+req.isAuthenticated());
   Business.findAll({
     where: {
       category: req.params.category
@@ -228,6 +196,7 @@ app.get('/places-things/:category', function(req, res){
     console.log(err);
     res.redirect('/?msg=Error');
   });
+
 });
 
 
@@ -256,7 +225,6 @@ app.post('/register', function(req,res){
     email: req.body.email,
     password: req.body.password
   }).then(function(user) {
-    console.log(user);
     res.redirect('/login');
   }).catch(function(err) {
     console.log(err);
@@ -271,8 +239,7 @@ app.get('/info/:name', function(req, res){
       name: req.params.name
     }
   }).then(function(business){
-    console.log(business);
-    res.render('displayInfo', {businesses: business});
+    res.render('displayInfo', {businesses: business, isAuthenticated: req.isAuthenticated()});
   }).catch(function(err){
     console.log(err);
     res.redirect('/?msg=Error');
@@ -281,8 +248,6 @@ app.get('/info/:name', function(req, res){
 
 
 app.post('/addingLocation', function(req, res){
-
-  console.log(req.body);
 
   Business.create({
     name: req.body.name,
