@@ -217,13 +217,13 @@ console.log(req.user.lastname);
 
 app.get('/places-things/:category', function(req, res){
 
+  console.log("places-things: "+req.isAuthenticated());
   Business.findAll({
     where: {
       category: req.params.category
     }
   }).then(function(business){
-    console.log(business);
-    res.render('places-things', {category: req.params.category, businesses: business});
+    res.render('places-things', {category: req.params.category, businesses: business, isAuthenticated: req.isAuthenticated()});
   }).catch(function(err){
     console.log(err);
     res.redirect('/?msg=Error');
