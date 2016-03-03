@@ -1,0 +1,36 @@
+{
+  "name": "16project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.0",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.13.0",
+    "express-sessions": "^1.0.5",
+    "mysql": "^2.10.2",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "pg": "^4.5.1",
+    "sequelize": "^3.19.3",
+    "yelp": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cbmoate/rutgersflyer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cbmoate/rutgersflyer/issues"
+  },
+  "homepage": "https://github.com/Cbmoate/rutgersflyer#readme"
+}
