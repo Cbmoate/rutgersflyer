@@ -73,7 +73,7 @@ passport.use(new passportLocal.Strategy({
         bcrypt.compare(password, user.dataValues.password, function(err, success) {
           if (success) {
             //if password is correct authenticate the user with cookie
-            done(null, { username: username, firstname: user.dataValues.firstname, lastname: user.dataValues.lastname , isAuthenticated: req.isAuthenticated});
+            done(null, { username: username, firstname: user.dataValues.firstname, lastname: user.dataValues.lastname , isAuthenticated: req.isAuthenticated, id: user.id});
           } else{
             done(null, false, {message: "Invalid email or password."});
           }
@@ -90,12 +90,12 @@ passport.use(new passportLocal.Strategy({
 
 
 passport.serializeUser(function(user, done) {
-  done(null, {email: user.username, firstname: user.firstname, lastname: user.lastname,isAuthenticated: 'true'});
+  done(null, {email: user.username, firstname: user.firstname, lastname: user.lastname,isAuthenticated: 'true', id: user.id});
 });
 
 
 passport.deserializeUser(function(username, done) {
-  done(null, {email: username.email, firstname: username.firstname, lastname: username.lastname,isAuthenticated: 'true'});
+  done(null, {email: username.email, firstname: username.firstname, lastname: username.lastname,isAuthenticated: 'true', id: username.id});
 });
 
 
@@ -300,11 +300,15 @@ app.post('/addingLocation', function(req, res){
 });
 
 app.post('/create_review', function(req,res){
-  console.log(req.user)
-  Review.create(req.body).then(function(err, result){
+  Review.create({
+    message: req.body.message,
+    rating: req.body.rating,
+    BusinessId: req.body.BusinessId,
+    UserId: req.user.id
+  }).then(function(err, result){
     console.log('err: ' + err);
     console.log('result: ' +result);
-    res.redirect('/info/asdf')
+    res.redirect(req.get('referer'));
   }).catch(function(err){
     console.log('err: ' + err);
     res.redirect('/?msg=Error');
