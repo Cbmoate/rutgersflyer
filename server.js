@@ -279,6 +279,51 @@ app.post('/create_review', function(req,res){
     res.redirect('/?msg=Error');
   });
 })
+
+function fillRemoteDB(){
+  Business.create({
+    name: 'restaurant',
+    category: 'Restaurant',
+    address: 'restaurant address',
+    phone_number: '1234567',
+    web_site: 'restaurant website'
+  })
+  Business.create({
+    name: 'entertainment',
+    category: 'Entertainment',
+    address: 'entertainment address',
+    phone_number: '1234567',
+    web_site: 'entertainment website'
+  })
+  Business.create({
+    name: 'retail',
+    category: 'Retail',
+    address: 'retail address',
+    phone_number: '1234567',
+    web_site: 'retail website'
+  })
+  Business.create({
+    name: 'trasportation',
+    category: 'Transportation',
+    address: 'trasportation address',
+    phone_number: '1234567',
+    web_site: 'trasportation website'
+  })
+  Business.create({
+    name: 'religion',
+    category: 'Religion',
+    address: 'religion address',
+    phone_number: '1234567',
+    web_site: 'religion website'
+  })
+  User.create({
+    firstname: 'Test First Name',
+    lastname: 'Test Last Name',
+    email: 'test@test',
+    password: 'password'
+  })
+
+}
 //Testing the database
 sequelize.sync().then(function() {
   app.listen(PORT, function () {
