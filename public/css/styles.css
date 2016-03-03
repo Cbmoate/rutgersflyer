@@ -48,7 +48,6 @@ form{
 }
 
 .hovereffect {
-  float:left;
   overflow:hidden;
   position:relative;
   text-align:center;
@@ -88,6 +87,7 @@ form{
   -webkit-transition:all .2s ease-in-out;
   transition:all .2s ease-in-out;
   padding:10px;
+  font-family: 'Comfortaa', cursive;
 }
 
 .hovereffect a.info {
@@ -133,8 +133,12 @@ form{
   transition-delay:.2s;
 }
 
-h4{
+
+.fpH4{
   padding-left: 5%;
+  font-family: 'Comfortaa', cursive;
+  color: #8E1011;
+  font-weight: bold;
 }
 
 #myfooter{
@@ -153,5 +157,31 @@ main {
 }
 
 .brand-logo{
-  font-family: 'Chewy', cursive;
+  font-family: 'Comfortaa', cursive;
+}
+
+.amber.darken-2 {
+  background-color: #333333 !important;
+}
+
+.categoryCard .card-header .card-title {
+  padding: 15px;
+}
+
+.categoryCard .category-card-title {
+  margin: 0;
+  font-weight: 300;
+}
+
+.card .card-content {
+  padding: 0px;
+}
+
+.category-card-title{
+  font-size: 90%;
+  color: #fff;
+}
+
+.row .col .l4{
+  margin-bottom: 30%;
 }
