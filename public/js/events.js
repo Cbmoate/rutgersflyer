@@ -14,7 +14,7 @@ $(document).ready(function() {
   });
 
 
-  $('#loginBUtton').on('click',function(){
+  $('#loginButton').on('click',function(){
     $('#loginModal').openModal()
   })
 

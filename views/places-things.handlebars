@@ -2,8 +2,9 @@
   <div class="row">
     <div class="col s5">
       <h3>{{category}}</h3>
+      {{#if isAuthenticated}}
       <a datatarget='modal2' type="button" id='addlocationbtn' name="button" href="#">Know a great place we dont? Click to add location</a>
-
+      {{/if}}
     </div>
 
     <div class="row">
