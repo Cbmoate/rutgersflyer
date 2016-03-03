@@ -48,7 +48,6 @@ form{
 }
 
 .hovereffect {
-  float:left;
   overflow:hidden;
   position:relative;
   text-align:center;
@@ -154,4 +153,26 @@ main {
 
 .brand-logo{
   font-family: 'Chewy', cursive;
+}
+
+.amber.darken-2 {
+  background-color: #333333 !important;
+}
+
+.categoryCard .card-header .card-title {
+  padding: 15px;
+}
+
+.categoryCard .category-card-title {
+  margin: 0;
+  font-weight: 300;
+}
+
+.card .card-content {
+  padding: 0px;
+}
+
+.category-card-title{
+  font-size: 90%;
+  color: #fff;
 }
