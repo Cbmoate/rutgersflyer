@@ -168,8 +168,8 @@ var Business = sequelize.define('Businesses', {
 });
 
 
-User.belongsToMany(Business, {through: Review});
-Business.belongsToMany(User, {through: Review});
+Review.belongsTo(User);
+Business.hasMany(Review);
 
 
 //page rendering
