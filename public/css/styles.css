@@ -87,6 +87,7 @@ form{
   -webkit-transition:all .2s ease-in-out;
   transition:all .2s ease-in-out;
   padding:10px;
+  font-family: 'Comfortaa', cursive;
 }
 
 .hovereffect a.info {
@@ -132,8 +133,12 @@ form{
   transition-delay:.2s;
 }
 
-h4{
+
+.fpH4{
   padding-left: 5%;
+  font-family: 'Comfortaa', cursive;
+  color: #8E1011;
+  font-weight: bold;
 }
 
 #myfooter{
@@ -152,7 +157,7 @@ main {
 }
 
 .brand-logo{
-  font-family: 'Chewy', cursive;
+  font-family: 'Comfortaa', cursive;
 }
 
 .amber.darken-2 {
@@ -175,4 +180,8 @@ main {
 .category-card-title{
   font-size: 90%;
   color: #fff;
+}
+
+.row .col .l4{
+  margin-bottom: 30%;
 }
