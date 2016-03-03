@@ -324,7 +324,6 @@ function fillRemoteDB(){
   })
 
 }
-fillRemoteDB()
 //Testing the database
 sequelize.sync().then(function() {
   app.listen(PORT, function () {
