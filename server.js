@@ -233,12 +233,16 @@ app.post('/register', function(req,res){
 });
 
 app.get('/info/:name', function(req, res){
-
   Business.findOne({
     where: {
       name: req.params.name
-    }
-  }).then(function(business){
+    },
+      include: [{
+        model: Review
+      }]
+    }).then(function(business){
+
+    console.log(business.Reviews)
     res.render('displayInfo', {businesses: business, isAuthenticated: req.isAuthenticated()});
   }).catch(function(err){
     console.log(err);
