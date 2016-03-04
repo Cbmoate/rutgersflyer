@@ -140,7 +140,6 @@ h4{
 }
 
 .fpH4{
-  /*padding-left: 5%;*/
   font-family: 'Comfortaa', cursive;
   color: black;
   font-weight: bold;
@@ -214,4 +213,21 @@ main {
 
 #categoriesbelow{
   padding-top: 5%;
+}
+
+
+/*For places-things*/
+h3{
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+}
+
+.myresize{
+  width: 130px;
+  height: auto;
+}
+
+.linkforimage{
+  overflow: auto;
+  float: left;
 }

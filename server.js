@@ -191,13 +191,72 @@ app.get('/places-things/:category', function(req, res){
       category: req.params.category
     }
   }).then(function(business){
-    res.render('places-things', {category: req.params.category, businesses: business, isAuthenticated: req.isAuthenticated()});
+
+    var image;
+    if(req.params.category === "Restaurant") {
+
+      image = 'restaurants.jpg';
+      setVariables(image, business, req, res);
+    }else if(req.params.category === "Entertainment") {
+
+      image = 'entertainment.jpg';
+      setVariables(image, business, req, res);
+    }else if(req.params.category === "Retail") {
+
+      image = 'retail.jpg';
+      setVariables(image, business, req, res);
+    }else if(req.params.category === "Medical") {
+
+      image = 'medical.jpg';
+      setVariables(image, business, req, res);
+    }else if(req.params.category === "RUBuilding") {
+
+      image = 'rubuildings.jpg';
+      setVariables(image, business, req, res);
+    }else if(req.params.category === "Transportation") {
+
+      image = 'transportation.jpg';
+      setVariables(image, business, req, res);
+    }else if(req.params.category === "Religion") {
+
+      image = 'Kirkpatrick_Chapel_1766_Rutgers.jpg';
+      setVariables(image, business, req, res);
+    }else if(req.params.category === "Automotive") {
+
+      image = 'automotive.jpg';
+      setVariables(image, business, req, res);
+    }else if(req.params.category === "ActiveLife") {
+
+      image = 'active-life.jpg';
+      setVariables(image, business, req, res);
+    }else if(req.params.category === "Beauty&Spas") {
+
+      image = 'beauty-spa.jpg';
+      setVariables(image, business, req, res);
+    }
   }).catch(function(err){
     console.log(err);
     res.redirect('/?msg=Error');
   });
 
 });
+
+
+function setVariables(image, business, req, res){
+
+  var businesses = [];
+  for(var i = 0; i < business.length; i++){
+    businesses.push({
+      name: business[i].name,
+      theimage: image
+    });
+  }
+  res.render('places-things', {
+    category: req.params.category,
+    businesses: businesses,
+    isAuthenticated: req.isAuthenticated()
+  });
+}
 
 
 app.get('/login', function(req, res) {
