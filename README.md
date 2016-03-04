@@ -11,7 +11,7 @@ There should be a basic filter that lets users narrow down what they want to sea
 
 There should be at least 4 views (but of course, you're free to do more):
 Home
-Login / Register
+Login 
 Place Detail
 Places Listing
 Data Modeling
@@ -19,11 +19,7 @@ Data Modeling
 You will blow away your database more times than you think. Be cool with that.
 Think about relationships.
 Pay strict attention to data types!
-Think about sessions sincerely.
-User Authentication
 
-This should be an email address / password authentication system
-You should not be able to register with the an email address if it exists in our system
-Have password rules (at least 5 characters, etc)
+
 Routing / Templating
 
