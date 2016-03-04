@@ -1,19 +1,19 @@
 <div class="displayPage" xmlns="http://www.w3.org/1999/html">
   <div class="row">
-    <div class="col s4">
-      <img src="http://lorempicsum.com/futurama/350/200/1">
+    <div class="col s12 m4 l3">
+      <img class="img-responsive" src="http://placehold.it/250x150">
     </div>
-    <div class="col s8">
+    <div class="col s12 m4 l8">
       <div class="row">
         <h4>{{businesses.name}}</h4>
       </div>
-      <div class="row">{{businesses.address}}</div>
-      <div class="row">{{businesses.phone_number}}</div>
+      <div class="row binfo">{{businesses.address}}</div>
+      <div class="row binfo">{{businesses.phone_number}}</div>
     </div>
   </div>
 
   <div class="row">
-    <div class="col s8">
+    <div class="col s12 m8 l8">
       {{#if isAuthenticated}}
       <div class="card-panel z-depth-3">
         <div class="row">{{name}}</div>
@@ -47,65 +47,28 @@
       </div>
 
       <div class="row display-reviews">
-        <div class="col s3">
+        <div class="col s12 m6 l4">
           <div class="row">
-            <img src="http://lorempicsum.com/nemo/125/70/5">
+            <img class="img-responsive" src="http://placehold.it/200x130">
             </br>
-            Name of user
+            <span id="displayname">Name of user</span>
           </div>
         </div>
-        <div class="col s9">
+        <div class="col s12 m6 l8">
           <div class="row">
-            "The star rating the user gave" DATE
+            <span class="displayreview">"The star rating the user gave" DATE</span>
           </div>
           <div class="row">
-            This is the review that the user wrote about the location
+            <span class="displayreview">This is the review that the user wrote about the location</span>
           </div>
         </div>
       </div>
-      <hr>
 
-      <div class="row display-reviews">
-        <div class="col s3">
-          <div class="row">
-            <img src="http://lorempicsum.com/nemo/125/70/5">
-            </br>
-            Name of user
-          </div>
-        </div>
-        <div class="col s9">
-          <div class="row">
-            "The star rating the user gave" DATE
-          </div>
-          <div class="row">
-            This is the review that the user wrote about the location
-          </div>
-        </div>
-      </div>
-      <hr>
 
-      <div class="row display-reviews">
-        <div class="col s3">
-          <div class="row">
-            <img src="http://lorempicsum.com/nemo/125/70/5">
-            </br>
-            Name of user
-          </div>
-        </div>
-        <div class="col s9">
-          <div class="row">
-            "The star rating the user gave" DATE
-          </div>
-          <div class="row">
-            This is the review that the user wrote about the location
-          </div>
-        </div>
-      </div>
-      <hr>
 
     </div>
 
-    <div class="col s4">
+    <div class="col s12 m4 l4">
       <div class="card-panel z-depth-3">
         <div class="row">Location Hours</div>
         <div class="row">hours.....</div>
