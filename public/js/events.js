@@ -5,8 +5,8 @@ $(document).ready(function() {
   var holdStarValue;
   $('select').material_select();
 
-  $('#testButton').on('click',function(){
-    $('#modal1').openModal();
+  $('#registerButton').on('click',function(){
+    $('#registerModal').openModal();
   });
 
   $('#addlocationbtn').on('click',function() {
