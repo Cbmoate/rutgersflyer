@@ -1,19 +1,19 @@
 <div class="displayPage" xmlns="http://www.w3.org/1999/html">
   <div class="row">
-    <div class="col s12 m4 l3">
-      <img class="img-responsive" src="http://placehold.it/250x150">
+    <div class="col s4">
+      <img src="http://lorempicsum.com/futurama/350/200/1">
     </div>
-    <div class="col s12 m4 l8">
+    <div class="col s8">
       <div class="row">
         <h4>{{businesses.name}}</h4>
       </div>
-      <div class="row binfo">{{businesses.address}}</div>
-      <div class="row binfo">{{businesses.phone_number}}</div>
+      <div class="row">{{businesses.address}}</div>
+      <div class="row">{{businesses.phone_number}}</div>
     </div>
   </div>
 
   <div class="row">
-    <div class="col s12 m8 l8">
+    <div class="col s8">
       {{#if isAuthenticated}}
       <div class="card-panel z-depth-3">
         <div class="row">{{name}}</div>
@@ -45,49 +45,32 @@
       <div class="row display-reviews">
         * * * * *   ADD STAR RATING FILTER
       </div>
-
+      {{#each businesses.Reviews}}
       <div class="row display-reviews">
-        <div class="col s12 m6 l4">
+        <div class="col s3">
           <div class="row">
-            <img class="img-responsive" src="http://placehold.it/200x130">
+            <img src="http://lorempicsum.com/nemo/125/70/5">
             </br>
-            <span id="displayname">Name of user</span>
+            Name
           </div>
         </div>
-        <div class="col s12 m6 l8">
+        <div class="col s9">
           <div class="row">
-            <span class="displayreview">"The star rating the user gave" DATE</span>
+            <p>{{rating}}</p>
           </div>
           <div class="row">
-            <span class="displayreview">This is the review that the user wrote about the location</span>
+          <p>{{message}}</p>
           </div>
         </div>
       </div>
+      <hr>
+      {{/each}}
     </div>
 
-    <div class="col s12 m4 l4">
-      <div class="row">
-        <div class="card-panel z-depth-3">
-          <div class="row"><span>Location Hours</span></div>
-          <div class="row">hours.....</div>
-        </div>
-      </div>
-
-      <div class="row">
-        <ul class="collection with-header">
-          <li class="collection-header"><h4>Categories</h4></li>
-          <li class="collection-item"><div>Restaurants<a href="/places-things/Restaurant" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-          <li class="collection-item"><div>Bars<a href="/places-things/Restaurant" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-          <li class="collection-item"><div>Entertainment<a href="/places-things/Entertainment" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-          <li class="collection-item"><div>Retail<a href="/places-things/Retail" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-          <li class="collection-item"><div>Medical<a href="/places-things/Medical" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-          <li class="collection-item"><div>Transportation<a href="/places-things/Transportation" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-          <li class="collection-item"><div>RU Buildings<a href="/places-things/RUBuilding" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-          <li class="collection-item"><div>Places of Worship<a href="/places-things/Religion" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-          <li class="collection-item"><div>Automotive<a href="/places-things/Automotive" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-          <li class="collection-item"><div>Active Life<a href="/places-things/ActiveLife" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-          <li class="collection-item"><div>Beauty & Spas<a href="/places-things/Beauty&Spas" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-        </ul>
+    <div class="col s4">
+      <div class="card-panel z-depth-3">
+        <div class="row">Location Hours</div>
+        <div class="row">hours.....</div>
       </div>
     </div>
   </div>
