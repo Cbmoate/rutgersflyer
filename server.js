@@ -341,7 +341,7 @@ app.post('/create_review', function(req,res){
     console.log('err: ' + err);
     res.redirect('/?msg=Error');
   });
-})
+});
 
 function fillRemoteDB(){
   Business.create({
