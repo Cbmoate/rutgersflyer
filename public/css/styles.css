@@ -190,9 +190,6 @@ main {
   color: #fff;
 }
 
-.row .col .l4{
-  margin-bottom: 30%;
-}
 
 .btn{
   background-color: #CC0033;
@@ -200,7 +197,7 @@ main {
 
 
 #loginModal{
-  width: 30%;
+  width: 50%;
   max-height: 100%;
   overflow: visible;
 }
@@ -213,6 +210,16 @@ main {
 
 #categoriesbelow{
   padding-top: 5%;
+}
+
+#slide-out{
+  background-color: #8E1011;
+}
+
+#slide-out a{
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
 }
 
 
@@ -230,4 +237,31 @@ h3{
 .linkforimage{
   overflow: auto;
   float: left;
+}
+
+span{
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+
+
+/*For displayInfo*/
+.binfo{
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.displayreview{
+  font-family: 'Comfortaa', cursive;
+  font-size: 14px;
+}
+
+#displayname{
+  font-family: 'Comfortaa', cursive;
+  font-size: 14px;
+  padding-left: 30%;
 }

@@ -5,7 +5,7 @@ $(document).ready(function() {
   var holdStarValue;
   $('select').material_select();
 
-  $('#registerButton').on('click',function(){
+  $('.registerButton').on('click',function(){
     $('#registerModal').openModal();
   });
 
@@ -13,8 +13,9 @@ $(document).ready(function() {
     $('#modal2').openModal();
   });
 
+  $(".button-collapse").sideNav();
 
-  $('#loginButton').on('click',function(){
+  $('.loginButton').on('click',function(){
     $('#loginModal').openModal()
   });
 
