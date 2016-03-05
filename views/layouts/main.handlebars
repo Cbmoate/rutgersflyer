@@ -19,11 +19,24 @@
                 <li><a href="/logout">Logout</a></li>
               {{else}}
               <!-- Modal Trigger Login -->
-              <li><a href="#!" id="loginButton" datatarget="loginModal">Sign In</a></li>
+              <li><a href="#!" class="loginButton" datatarget="loginModal">Sign In</a></li>
               <!-- Modal Trigger register-->
-              <li><a href="#!" id="registerButton" datatarget="registerModal">Sign Up</a></li>
+              <li><a href="#!" class="registerButton" datatarget="registerModal">Sign Up</a></li>
               {{/if}}
             </ul>
+
+            <ul id="slide-out" class="side-nav">
+              {{#if isAuthenticated}}
+              <li><a href="/login">{{firstname}} {{lastname}}</a></li>
+              <li><a href="/logout">Logout</a></li>
+              {{else}}
+                <!-- Modal Trigger Login -->
+                <li><a href="#!" class="loginButton" datatarget="loginModal">Sign In</a></li>
+                <!-- Modal Trigger register-->
+                <li><a href="#!" class="registerButton" datatarget="registerModal">Sign Up</a></li>
+              {{/if}}
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
           </div>
         </nav>
       </div>

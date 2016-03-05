@@ -44,11 +44,11 @@
 
               <div class="row">
                 <div class="input-field col s6">
-                  <input id="input_text" type="text" length="20" name="name">
+                  <input id="input_text" type="text" length="50" name="name">
                   <label for="input_text">Name of place</label>
                 </div>
                 <div class="input-field col s6">
-                  <input id="input_text" type="text" length="40" name="address">
+                  <input id="input_text" type="text" length="60" name="address">
                   <label for="input_text">Address</label>
                 </div>
               </div>
@@ -88,15 +88,16 @@
     <div class="row">
 
       {{#each businesses}}
-        <div class="col s6">
+        <div class="col s6 ">
           <div class="row">
-            <div class="col s4">
-              <img class="img-responsive myresize" src="../images/{{theimage}}">
+            <div class="col s12 m6 l6">
+              <img class="img-responsive" src="../images/{{theimage}}">
             </div>
-            <div class="col s8">
+            <div class="col s12 m6 l6">
               <a class="linkforimage" href="/info/{{name}}"><span>{{name}}</span></a>
             </div>
           </div>
+
           <div class="row">
             <div class="col s12">
               What it says in the review....
