@@ -144,6 +144,9 @@ var Review = sequelize.define('Reviews', {
   },
   rating: {
     type: Sequelize.INTEGER
+  },
+  username:{
+    type: Sequelize.STRING
   }
 });
 
@@ -328,11 +331,13 @@ app.post('/addingLocation', function(req, res){
 });
 
 app.post('/create_review', function(req,res){
+
   Review.create({
     message: req.body.message,
     rating: req.body.rating,
     BusinessId: req.body.BusinessId,
-    UserId: req.user.id
+    UserId: req.user.id,
+    username: req.user.email
   }).then(function(err, result){
     console.log('err: ' + err);
     console.log('result: ' +result);
@@ -387,6 +392,7 @@ function fillRemoteDB(){
   })
 
 }
+
 //Testing the database
 sequelize.sync().then(function() {
   app.listen(PORT, function () {
