@@ -48,7 +48,6 @@ form{
 }
 
 .hovereffect {
-  float:left;
   overflow:hidden;
   position:relative;
   text-align:center;
@@ -88,6 +87,7 @@ form{
   -webkit-transition:all .2s ease-in-out;
   transition:all .2s ease-in-out;
   padding:10px;
+  font-family: 'Comfortaa', cursive;
 }
 
 .hovereffect a.info {
@@ -134,7 +134,19 @@ form{
 }
 
 h4{
-  padding-left: 5%;
+  font-family: 'Comfortaa', cursive;
+  color: #8E1011;
+  font-weight: bold;
+}
+
+.fpH4{
+  font-family: 'Comfortaa', cursive;
+  color: black;
+  font-weight: bold;
+  background-color: #E0DABA;
+  padding: 15px 15px 15px 15px;
+  margin-top: -2%;
+  text-align: center;
 }
 
 #myfooter{
@@ -145,7 +157,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: #F5F3EC;
+  background-color: #FFFFFF;
 }
 
 main {
@@ -153,5 +165,103 @@ main {
 }
 
 .brand-logo{
-  font-family: 'Chewy', cursive;
+  font-family: 'Comfortaa', cursive;
+}
+
+.amber.darken-2 {
+  background-color: #820000 !important;
+}
+
+.categoryCard .card-header .card-title {
+  padding: 15px;
+}
+
+.categoryCard .category-card-title {
+  margin: 0;
+  font-weight: 300;
+}
+
+.card .card-content {
+  padding: 0px;
+}
+
+.category-card-title{
+  font-size: 90%;
+  color: #fff;
+}
+
+
+.btn{
+  background-color: #CC0033;
+}
+
+
+#loginModal{
+  width: 50%;
+  max-height: 100%;
+  overflow: visible;
+}
+
+#modal1{
+  width: 30%;
+  max-height: 100%;
+  overflow: visible;
+}
+
+#categoriesbelow{
+  padding-top: 5%;
+}
+
+#slide-out{
+  background-color: #8E1011;
+}
+
+#slide-out a{
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+}
+
+
+/*For places-things*/
+h3{
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+}
+
+.myresize{
+  width: 130px;
+  height: auto;
+}
+
+.linkforimage{
+  overflow: auto;
+  float: left;
+}
+
+span{
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+
+
+/*For displayInfo*/
+.binfo{
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.displayreview{
+  font-family: 'Comfortaa', cursive;
+  font-size: 14px;
+}
+
+#displayname{
+  font-family: 'Comfortaa', cursive;
+  font-size: 14px;
+  padding-left: 30%;
 }

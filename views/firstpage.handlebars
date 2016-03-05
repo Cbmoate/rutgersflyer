@@ -1,8 +1,3 @@
-{{#if isAuthenticated}}
-  <h2>Hello there {{firstname}}</h2>
-{{else}}
-{{/if}}
-
 <div class="row no-gutter">
 
   <div class="col s12 m12 l6 nopadding mycol" id="firstrowimage">
@@ -75,55 +70,119 @@
   </div>
 </div>
 
-<h4>Looking for more...</h4>
+<h4 class="z-depth-3 fpH4">Looking for more...</h4>
 
 <div class="container">
-  <div class="row">
-    <div class="row">
-      <div class="col s4">
-        <div class="card">
-          <div class="card-image">
-            <img src="../images/rubuildings.jpg">
-            <span class="card-title">RU Buildings</span>
-          </div>
-          <div class="card-content">
-            <p>RU you looking for buildings around Rutgers? Checkout our list of Rutgers facilities that you may be looking for.</p>
-          </div>
-          <div class="card-action">
-            <a href="/places-things/RUBuilding">More Info</a>
+  <div class="row" id="categoriesbelow">
+
+    <div class="col s12 m6 l4">
+      <div class="card categoryCard z-depth-2">
+        <div class="card-header amber darken-2">
+          <div class="card-title">
+            <a href="/places-things/RUBuilding"><h4 class="category-card-title">RU Buildings</h4></a>
           </div>
         </div>
-      </div>
 
-      <div class="col s4">
-        <div class="card">
-          <div class="card-image">
-            <img src="../images/transportation.jpg">
-            <span class="card-title">Transportation</span>
-          </div>
+        <div class="card-content-bg white-text">
           <div class="card-content">
-            <p>Need to know which bus to take to class? Need to know the best time to take the bus? Check out what people have to say.</p>
-          </div>
-          <div class="card-action">
-            <a href="/places-things/Transportation">More Info</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col s4">
-        <div class="card">
-          <div class="card-image">
-            <img src="../images/Kirkpatrick_Chapel_1766_Rutgers.jpg" alt="By ColonelHenry at English Wikipedia, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=34611156">
-            <span class="card-title">Places of Worship</span>
-          </div>
-          <div class="card-content">
-            <p>New around Rutgers? Need a place to </p>
-          </div>
-          <div class="card-action">
-            <a href="/places-things/Religion">More Info</a>
+            <div class="card-image hovereffect">
+              <img class="img-responsive" src="../images/rubuildings.jpg">
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="col s12 m6 l4">
+      <div class="card categoryCard z-depth-2">
+        <div class="card-header amber darken-2">
+          <div class="card-title">
+            <a href="/places-things/Transportation"><h4 class="category-card-title">Transportation</h4></a>
+          </div>
+        </div>
+
+        <div class="card-content-bg white-text">
+          <div class="card-content">
+            <div class="card-image hovereffect">
+              <img class="img-responsive" src="../images/transportation.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m6 l4">
+      <div class="card categoryCard z-depth-2">
+        <div class="card-header amber darken-2">
+          <div class="card-title">
+            <a href="/places-things/Religion"><h4 class="category-card-title">Places of Worship</h4></a>
+          </div>
+        </div>
+
+        <div class="card-content-bg white-text">
+          <div class="card-content">
+            <div class="card-image hovereffect">
+              <img class="img-responsive" src="../images/Kirkpatrick_Chapel_1766_Rutgers.jpg" alt="By ColonelHenry at English Wikipedia, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=34611156">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m6 l4">
+      <div class="card categoryCard z-depth-2">
+        <div class="card-header amber darken-2 img-responsive">
+          <div class="card-title">
+            <a href="/places-things/Automotive"><h4 class="category-card-title">Automotive</h4></a>
+          </div>
+        </div>
+
+        <div class="card-content-bg white-text">
+          <div class="card-content">
+            <div class="card-image hovereffect">
+              <img class="img-responsive" src="../images/automotive.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m6 l4">
+      <div class="card categoryCard z-depth-2">
+        <div class="card-header amber darken-2 img-responsive">
+          <div class="card-title">
+            <a href="/places-things/ActiveLife"><h4 class="category-card-title">Active Life</h4></a>
+          </div>
+        </div>
+
+        <div class="card-content-bg white-text">
+          <div class="card-content">
+            <div class="card-image hovereffect">
+              <img class="img-responsive" src="../images/active-life.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m6 l4">
+      <div class="card categoryCard z-depth-2">
+        <div class="card-header amber darken-2 img-responsive">
+          <div class="card-title">
+            <a href="/places-things/Beauty&Spas"><h4 class="category-card-title">Beauty and Spas</h4></a>
+          </div>
+        </div>
+
+        <div class="card-content-bg white-text">
+          <div class="card-content">
+            <div class="card-image hovereffect">
+              <img class="img-responsive" src="../images/beauty-spa.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </div>
