@@ -45,25 +45,25 @@
       <div class="row display-reviews">
         * * * * *   ADD STAR RATING FILTER
       </div>
-
+      {{#each businesses.Reviews}}
       <div class="row display-reviews">
         <div class="col s12 m6 l4">
           <div class="row">
             <img class="img-responsive" src="http://placehold.it/200x130">
             </br>
-            <span id="displayname">Name of user</span>
+            <span id="displayname">{{username}}</span>
           </div>
         </div>
         <div class="col s12 m6 l8">
           <div class="row">
-            <span class="displayreview">"The star rating the user gave" DATE</span>
+            <span class="displayreview">{{rating}}</span>
           </div>
           <div class="row">
-            <span class="displayreview">This is the review that the user wrote about the location</span>
+            <span class="displayreview">{{message}}</span>
           </div>
         </div>
       </div>
-
+      {{/each}}
 
 
     </div>

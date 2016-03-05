@@ -144,6 +144,9 @@ var Review = sequelize.define('Reviews', {
   },
   rating: {
     type: Sequelize.INTEGER
+  },
+  username:{
+    type: Sequelize.STRING
   }
 });
 
@@ -175,8 +178,8 @@ Business.hasMany(Review);
 //page rendering
 app.get('/', function(req, res){
   if(req.isAuthenticated()){
-console.log(req.user);
-console.log(req.user.lastname);
+  console.log(req.user);
+  console.log(req.user.lastname);
     res.render('firstpage', req.user);
   }else{
     res.render('firstpage', {firstDisplay: false, msg: req.query.msg, isAuthenticated: req.isAuthenticated()});
@@ -328,11 +331,13 @@ app.post('/addingLocation', function(req, res){
 });
 
 app.post('/create_review', function(req,res){
+
   Review.create({
     message: req.body.message,
     rating: req.body.rating,
     BusinessId: req.body.BusinessId,
-    UserId: req.user.id
+    UserId: req.user.id,
+    username: req.user.email
   }).then(function(err, result){
     console.log('err: ' + err);
     console.log('result: ' +result);
@@ -341,7 +346,7 @@ app.post('/create_review', function(req,res){
     console.log('err: ' + err);
     res.redirect('/?msg=Error');
   });
-})
+});
 
 function fillRemoteDB(){
   Business.create({
@@ -382,11 +387,12 @@ function fillRemoteDB(){
   User.create({
     firstname: 'Test First Name',
     lastname: 'Test Last Name',
-    email: 'test@test',
+    email: 'test2@test',
     password: 'password'
   })
 
 }
+
 //Testing the database
 sequelize.sync().then(function() {
   app.listen(PORT, function () {
