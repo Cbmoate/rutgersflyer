@@ -3,6 +3,7 @@
  */
 $(document).ready(function() {
   var holdStarValue;
+
   $('select').material_select();
 
   $('.registerButton').on('click',function(){
