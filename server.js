@@ -178,8 +178,8 @@ Business.hasMany(Review);
 //page rendering
 app.get('/', function(req, res){
   if(req.isAuthenticated()){
-console.log(req.user);
-console.log(req.user.lastname);
+  console.log(req.user);
+  console.log(req.user.lastname);
     res.render('firstpage', req.user);
   }else{
     res.render('firstpage', {firstDisplay: false, msg: req.query.msg, isAuthenticated: req.isAuthenticated()});
@@ -387,7 +387,7 @@ function fillRemoteDB(){
   User.create({
     firstname: 'Test First Name',
     lastname: 'Test Last Name',
-    email: 'test@test',
+    email: 'test2@test',
     password: 'password'
   })
 
