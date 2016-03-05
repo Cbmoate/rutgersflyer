@@ -1,112 +1,92 @@
-<div class="row">
-  <div class="col s12 m4 l3">
-    <ul class="collection with-header">
-      <li class="collection-header"><h4>Categories</h4></li>
-      <li class="collection-item"><div>Restaurants<a href="/places-things/Restaurant" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-      <li class="collection-item"><div>Bars<a href="/places-things/Restaurant" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-      <li class="collection-item"><div>Entertainment<a href="/places-things/Entertainment" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-      <li class="collection-item"><div>Retail<a href="/places-things/Retail" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-      <li class="collection-item"><div>Medical<a href="/places-things/Medical" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-      <li class="collection-item"><div>Transportation<a href="/places-things/Transportation" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-      <li class="collection-item"><div>RU Buildings<a href="/places-things/RUBuilding" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-      <li class="collection-item"><div>Places of Worship<a href="/places-things/Religion" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-      <li class="collection-item"><div>Automotive<a href="/places-things/Automotive" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-      <li class="collection-item"><div>Active Life<a href="/places-things/ActiveLife" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-      <li class="collection-item"><div>Beauty & Spas<a href="/places-things/Beauty&Spas" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-    </ul>
+<div class="container">
+  <div class="row">
+    <div class="col s5">
+      <h3>{{category}}</h3>
+      {{#if isAuthenticated}}
+      <a datatarget='modal2' type="button" id='addlocationbtn' name="button" href="#">Know a great place we dont? Click to add location</a>
+      {{/if}}
+    </div>
+
+    <div class="row">
+
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <h4>Add a place..</h4>
+          <form class="col s12" action="/addingLocation" method="post">
+            <div class="input-field col s12">
+              <select name="category">
+                <option value="" disabled selected>Choose a category</option>
+                <option value="Restaurant">Restaurant</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Retail">Retail</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Religion">Place of Worship</option>
+              </select>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="input_text" type="text" length="20" name="name">
+                <label for="input_text">Name of place</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="input_text" type="text" length="40" name="address">
+                <label for="input_text">Address</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="icon_telephone" type="tel" class="validate" name="phone_number">
+                <label for="icon_telephone">Telephone</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="input_text" type="text" length="40" name="web_site">
+                <label for="input_text">Website</label>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col s12">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+        <div class="modal-footer"></div>
+      </div>
+
+    </div>
   </div>
 
-  <div class="col s12 m8 l9">
-    <div class="row">
-      <div class="col s5">
-        <h3>{{category}}</h3>
-        {{#if isAuthenticated}}
-          <a datatarget='modal2' type="button" id='addlocationbtn' name="button" href="#">Know a great place we dont? Click to add location</a>
-        {{/if}}
-      </div>
+  <div class="row">
+    <div class="col s12">Filter will go here</div>
+  </div>
+  <hr>
 
+  <div class="row">
+
+    {{#each businesses}}
+    <div class="col s6">
       <div class="row">
-
-        <div id="modal2" class="modal">
-          <div class="modal-content">
-            <h4>Add a place..</h4>
-            <form class="col s12" action="/addingLocation" method="post">
-              <div class="input-field col s12">
-                <select name="category">
-                  <option value="" disabled selected>Choose a category</option>
-                  <option value="Restaurant">Restaurant</option>
-                  <option value="Entertainment">Entertainment</option>
-                  <option value="Retail">Retail</option>
-                  <option value="Transportation">Transportation</option>
-                  <option value="Religion">Place of Worship</option>
-                </select>
-              </div>
-
-              <div class="row">
-                <div class="input-field col s6">
-                  <input id="input_text" type="text" length="50" name="name">
-                  <label for="input_text">Name of place</label>
-                </div>
-                <div class="input-field col s6">
-                  <input id="input_text" type="text" length="60" name="address">
-                  <label for="input_text">Address</label>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="input-field col s6">
-                  <input id="icon_telephone" type="tel" class="validate" name="phone_number">
-                  <label for="icon_telephone">Telephone</label>
-                </div>
-                <div class="input-field col s6">
-                  <input id="input_text" type="text" length="40" name="web_site">
-                  <label for="input_text">Website</label>
-                </div>
-              </div>
-
-
-              <div class="row">
-                <div class="col s12">
-                  <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
-                </div>
-              </div>
-
-            </form>
-          </div>
-
-          <div class="modal-footer"></div>
+        <div class="col s4">
+          <img class="myresize" src="../images/{{theimage}}">
         </div>
-
+        <div class="col s8">
+          <a class="linkforimage" href="/info/{{name}}">{{name}}</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          What it says in the review....
+        </div>
       </div>
     </div>
+    {{/each}}
 
-    <div class="row">
-      <div class="col s12">Filter will go here</div>
-    </div>
-    <hr>
-
-    <div class="row">
-
-      {{#each businesses}}
-        <div class="col s6 ">
-          <div class="row">
-            <div class="col s12 m6 l6">
-              <img class="img-responsive" src="../images/{{theimage}}">
-            </div>
-            <div class="col s12 m6 l6">
-              <a class="linkforimage" href="/info/{{name}}"><span>{{name}}</span></a>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12">
-              What it says in the review....
-            </div>
-          </div>
-        </div>
-      {{/each}}
-
-    </div>
   </div>
 </div>
 
